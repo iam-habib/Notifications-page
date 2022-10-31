@@ -92,7 +92,7 @@ main {
 }
 
 .avatar_name {
-  font-weight: 800;
+ font-family: "Plus Jakarta Sans Bold";
   color: var(--Verydarkblue);
 }
 
@@ -112,7 +112,7 @@ main {
 }
 
 .club {
-  font-weight: 800;
+  font-family: "Plus Jakarta Sans Bold";
   color: var(--Blue);
   cursor: pointer;
 }
@@ -154,7 +154,7 @@ main {
 }
 
 .post {
-  font-weight: 800;
+  font-family: "Plus Jakarta Sans Bold";
   color: var(--Darkgrayishblue);
   cursor: pointer;
 }
