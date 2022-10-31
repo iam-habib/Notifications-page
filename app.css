@@ -1,0 +1,233 @@
+:root {
+  --Red: hsl(1, 90%, 64%);
+  --Blue: hsl(219, 85%, 26%);
+  --White: hsl(0, 0%, 100%);
+  --Verylightgrayishblue: hsl(210, 60%, 98%);
+  --Lightgrayishblue1: hsl(211, 68%, 94%);
+  --Lightgrayishblue2: hsl(205, 33%, 90%);
+  --Grayishblue: hsl(219, 14%, 63%);
+  --Darkgrayishblue: hsl(219, 12%, 42%);
+  --Verydarkblue: hsl(224, 21%, 14%);
+  font-size: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans Bold";
+  src: url(assets/fonts/static/PlusJakartaSans-ExtraBold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url(assets/fonts/static/PlusJakartaSans-Medium.ttf) format("truetype");
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--Verylightgrayishblue);
+  font-family: "Plus Jakarta Sans";
+}
+
+main {
+  width: 45%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 2em 2em 0em;
+  border-radius: 1em;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.heading > p {
+  color: var(--Darkgrayishblue);
+}
+
+.heading .noti_text {
+  display: flex;
+  align-items: center;
+}
+
+.heading .noti_text p {
+  color: white;
+  margin-left: 0.5em;
+  padding: 0.2em 0.9em;
+  border-radius: 0.2em;
+  display: inline-block;
+  background-color: var(--Blue);
+  font-weight: 800;
+}
+
+.noti_info {
+  padding: 1em;
+  display: flex;
+  margin: 0.5em auto;
+}
+
+.unread {
+  background-color: var(--Verylightgrayishblue);
+  border-radius: 0.5em;
+}
+
+.unread .noti_details p:nth-child(1)::after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--Red);
+}
+
+.avatar_name {
+  font-weight: 800;
+  color: var(--Verydarkblue);
+}
+
+.avatar_name:hover {
+  cursor: pointer;
+  color: var(--Blue);
+}
+
+.noti_details p {
+  color: var(--Darkgrayishblue);
+  margin-right: 1em;
+}
+
+.noti_details p:nth-child(2) {
+  color: var(--Grayishblue);
+  margin: 0.3em auto;
+}
+
+.club {
+  font-weight: 800;
+  color: var(--Blue);
+  cursor: pointer;
+}
+
+.noti_info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 1em;
+}
+
+.msg_container {
+  margin: 1em auto 0em;
+  padding: 1em;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  color: var(--Darkgrayishblue);
+  cursor: pointer;
+}
+
+.msg_container:hover {
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  background-color: var(--Lightgrayishblue1);
+}
+
+.com_pic {
+  position: relative;
+}
+
+.picture {
+  position: absolute;
+  right: 0;
+}
+
+.mark_read {
+  cursor: pointer;
+}
+
+.mark_read:hover {
+  color: var(--Blue);
+}
+
+.post {
+  font-weight: 800;
+  color: var(--Darkgrayishblue);
+  cursor: pointer;
+}
+
+.post:hover {
+  color: var(--Blue);
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+  main {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1200px) {
+  :root {
+    font-size: 14px;
+  }
+  main {
+    width: 55%;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 950px) {
+  :root {
+    font-size: 13px;
+  }
+  main {
+    width: 65%;
+  }
+}
+
+@media screen and (min-width: 50px) and (max-width: 750px) {
+  :root {
+    font-size: 14px;
+  }
+  body {
+    min-height: 100%;
+    background-color: #fff;
+  }
+
+  main {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    transform: translate(0, 0);
+    width: 100%;
+    height: 100%;
+  }
+
+  .noti_info {
+    padding: 1em;
+    display: flex;
+    margin: 1.5em auto;
+  }
+
+  .com_pic {
+    padding-right: 20%;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px) {
+  :root {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 50px) and (max-width: 400px) {
+  :root {
+    font-size: 12.5px;
+  }
+
+  .noti_text h2 {
+    font-size: 1.3rem;
+  }
+}
